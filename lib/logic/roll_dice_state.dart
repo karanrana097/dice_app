@@ -1,6 +1,11 @@
 part of 'roll_dice_cubit.dart';
 
-@immutable
-sealed class RollDiceState {}
+abstract class RollDiceState {}
 
-final class RollDiceInitial extends RollDiceState {}
+class RollDiceInitial extends RollDiceState {}
+
+class RollDiceValue extends RollDiceState {
+  final int diceNumber;
+
+  RollDiceValue(this.diceNumber);
+}

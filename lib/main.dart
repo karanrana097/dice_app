@@ -1,4 +1,8 @@
+import 'package:dice_app/logic/roll_dice_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:dice_app/presentation/home_screen.dart';
+
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +13,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return BlocProvider(
+      create: (_) => RollDiceCubit(),
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: HomeScreen(),
       ),
     );
   }
