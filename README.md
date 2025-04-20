@@ -27,7 +27,7 @@ A simple dice roller mobile app built using **Flutter** and **Bloc (Cubit)** sta
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/dice_roller_app.git
+git clone https://github.com/karanrana097/dice_roller_app.git
 cd dice_roller_app
 ```
 
